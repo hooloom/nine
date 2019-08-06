@@ -1,0 +1,17 @@
+.modal-header {
+    padding:9px 15px;
+    border-bottom:1px solid #1c1c1c;
+    background-color: #1c1c1c;
+     color: whitesmoke;
+ }
+ .modal-footer {
+    padding:9px 15px;
+    border:1px solid #1c1c1c;
+    background-color: #1c1c1c;
+ }
+ .modal-body {
+     background-color:  #1c1c1c
+ }
+ button:focus{
+     outline: none
+ }

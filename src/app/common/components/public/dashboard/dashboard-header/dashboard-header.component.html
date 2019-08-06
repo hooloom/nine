@@ -1,0 +1,223 @@
+<div class="header" style="height: 84px; text-align: center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
+                    <div class="logo">
+                        <a href="index.html"><img src="../assets/images/logo.png" alt=""></a>
+                    </div>
+
+                    <span class="nav-control">
+                        <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                    <div class="header-search">
+                        <form action="#">
+                            <div class="form-group">
+                                <i class="icofont icofont-search"></i>
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+                    <a href="chat.html#" class="btn btn-primary create-event-btn" data-toggle="modal" data-target="#creat-event">Create New Event</a>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6" style="align-self: center">
+                    <div class="header-user-profile">
+                        <div class="dropdown">
+                            <div data-toggle="dropdown">
+                                <p> Revenue :
+                                    <span>$2500.00</span></p>
+                                <img src="../assets/images/thumb/1.png" alt="">
+                            </div>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="chat.html#">My Profile</a>
+                                <a class="dropdown-item" href="chat.html#">Notifications <span class="badge badge-danger">5</span></a>
+                                <a class="dropdown-item" href="chat.html#">Event Created</a>
+                                <a class="dropdown-item" href="chat.html#">Event Attended </a>
+                                <a class="dropdown-item" href="chat.html#">Elements</a>
+                                <a class="dropdown-item" href="chat.html#">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <nav class="topbar-nav">
+                        <ul class="metismenu" id="metismenu">
+                            <li>
+                                <a href="index.html">
+                                    <i class="icon-dashboard" style="font-size: 14pt"></i> <span style="font-size: 11pt"> DASHBOARD</span>
+                                </a>
+                            </li>
+                            <li ngbDropdown>
+                                    <a  id="commerce" ngbDropdownToggle class="has-arrow" aria-expanded="false">
+                                            <i class="icon-wallet1" style="font-size: 14pt"></i> <span style="font-size: 11pt; " > Commerce</span>
+                                    </a>
+                                    <ul ngbDropdownMenu aria-labelledby="devices" aria-expanded="false">
+                                        <li>
+                                                <a [routerLink]="dashboard/ledger"><i class="icon-calculator1"></i>  Ledger</a>
+                                        </li>
+                                        <li>
+                                                <a [routerLink]="dashboard/ledger"><i class="icon-line-bag"></i>  Products</a>
+                                        </li>
+                                        <li>
+                                                <a [routerLink]="dashboard/ledger"><i class="icon-credit-cards"></i>  Refunds</a>
+                                        </li>
+                                        <li>
+                                                <a [routerLink]="dashboard/ledger"><i class="icon-bars1"></i>  Transactions</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </li>
+                            <li ngbDropdown>
+                                    <a  id="devices" ngbDropdownToggle class="has-arrow" aria-expanded="false">
+                                            <i class="icon-phone-landscape" style="font-size: 14pt"></i> <span style="font-size: 11pt; " > Devices</span>
+                                    </a>
+                                    <ul ngbDropdownMenu aria-labelledby="devices" aria-expanded="false">
+                                            <li>
+                                                    <a [routerLink]="dashboard/social"><i class="icon-line-circle-plus"></i>  Add New</a>
+                                            </li>
+                                        
+                                        <li>
+                                            <a [routerLink]="dashboard/laptops"><i class="icon-laptop1"></i>  Laptops</a>
+                                        </li>
+                                        <li>
+                                            <a [routerLink]="dashboard/mobile"><i class="icon-tablet1"></i>  Mobile</a>     
+                                        </li>
+                                        <li>
+                                            <a [routerLink]="dashboard/network"><i class="icon-wifi-full"></i>  Network</a>
+                                        </li>
+                                        <li>
+                                            <a [routerLink]="dashboard/phones"><i class="icon-line2-earphones-alt"></i>  Voice</a>
+                                        </li>
+                                        <li>
+                                            <a [routerLink]="dashboard/printers"><i class="icon-line-printer"></i>  Printers</a>
+                                        </li>
+                                        <li>
+                                            <a [routerLink]="dashboard/storage"><i class="icon-line-server"></i>  Virtual</a>
+                                        </li>
+                                        <li>
+                                            <a [routerLink]="dashboard/thinclient"><i class="icon-news"></i>  Thin Client</a>
+                                        </li>
+                                        
+
+                                        
+                                    </ul>
+                                </li>
+                            <li ngbDropdown class="">
+                                <a id="content" ngbDropdownToggle class=""  aria-expanded="false">
+                                    <i class="icon-line-share" style="font-size: 14pt"></i> <span style="font-size: 11pt; " > Outreach</span>
+                                </a>
+                                <ul ngbDropdownMenu aria-labelledby="content" aria-expanded="false"> 
+                                        <li>
+                                                <a [routerLink]="dashboard/social"><i class="icon-line-circle-plus"></i>  Add New</a>
+                                        </li>
+                                    <li>
+                                        <a [routerLink]="dashboard/advertising"><i class="icon-news"></i>  Advertising</a>
+                                    </li>
+                                    <li>
+                                            <a [routerLink]="dashboard/social"><i class="icon-line-grid"></i>  Campaigns</a>
+                                        </li>
+                                    <li>
+                                       <a [routerLink]="dashboard/web"><i class="icon-line-layout"></i>  Web</a>
+                                    </li>
+                                    <li>
+                                        <a [routerLink]="dashboard/signage"><i class=" icon-tv1"></i>  Signage</a>     
+                                    </li>
+                                    <li>
+                                        <a [routerLink]="dashboard/social"><i class="icon-like"></i>  Social Media</a>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+                            <li ngbDropdown class="">
+                                    <a id="users" ngbDropdownToggle class=""  aria-expanded="false">
+                                            <i class="icon-users1" style="font-size: 14pt"></i> <span style="font-size: 11pt; " > Users</span>
+                                    </a>
+                                    <ul ngbDropdownMenu aria-labelledby="users" aria-expanded="false">
+                                            <li>
+                                                    <a [routerLink]="dashboard/social"><i class="icon-line-circle-plus"></i>  Add New</a>
+                                            </li>
+                                            <li>
+                                                    <a [routerLink]="dashboard/social"><i class="icon-line-book"></i>  Account</a>
+                                            </li>
+                                                  
+                                        <li>
+                                                    <a [routerLink]="dashboard/social"><i class="icon-line-link"></i>  Devices</a>
+                                            </li>
+                                        <li>
+                                                <a [routerLink]="dashboard/email"><i class="icon-line-clipboard"></i>  Email</a>
+
+                                        </li>
+                                        <li>
+                                                <a [routerLink]="dashboard/passwordreset"><i class="icon-line-repeat"></i>  Reset</a>
+                                        </li>
+                                       
+                                    </ul>
+                                </li>
+                           
+                            <li ngbDropdown>
+                                    <a  id="infrastructure" ngbDropdownToggle class="has-arrow" aria-expanded="false">
+                                            <i class="icon-group" style="font-size: 14pt"></i> <span style="font-size: 11pt; " > Employees</span>
+                                    </a>
+                                <ul ngbDropdownMenu aria-labelledby="infrastructure" aria-expanded="false">
+                                     
+                                        <li>
+                                                <a [routerLink]="dashboard/social"><i class="icon-line-circle-plus"></i>  Add New</a>
+                                        </li>
+                                        <li>
+                                                <a [routerLink]="dashboard/location"><i class="icon-line-map"></i>  Location</a>
+
+                                        </li>  
+                                        <li>
+                                                <a [routerLink]="dashboard/passwordreset"><i class="icon-params"></i>  Manage</a>
+
+                                        </li>  
+                                    <li>
+                                                <a [routerLink]="dashboard/passwordreset"><i class="icon-line-globe"></i>  Org Chart</a>
+
+                                        </li>
+
+                                            <li>
+                                                    <a [routerLink]="dashboard/social"><i class="icon-line-eye"></i>  Monitor</a>
+                                            </li>
+                                            <li>
+                                                    <a [routerLink]="dashboard/passwordreset"><i class="icon-line-watch"></i>  Time Card</a>
+                                            </li>
+                                   
+                                </ul>
+                            </li>
+                         
+
+                            <li ngbDropdown>
+                                <a  id="settings" ngbDropdownToggle class="has-arrow" aria-expanded="false">
+                                        <i class="icon-line2-settings" style="font-size: 14pt"></i> <span style="font-size: 11pt; " > Settings</span>
+                                </a>
+                                <ul ngbDropdownMenu aria-labelledby="settings" aria-expanded="false">
+                                    <li>
+                                        <a routerLink="profile" ngbDropdownToggle>Organization</a>
+                                    </li>
+                                    <li>
+                                        <a routerLink="billing" ngbDropdownToggle>Payment</a>
+                                    </li>
+                                    <li>
+                                        <a href="setting_notification.html">Notification</a>
+                                    </li>
+                                    <li>
+                                        <a href="setting_as_personal.html">Personal</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>

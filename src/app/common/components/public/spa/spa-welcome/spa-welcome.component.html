@@ -1,0 +1,16 @@
+<section id="content" style="margin-top: -180; width: 100%">
+        <div class="content-wrap nopadding">
+        <div class="section section-curve notopmargin" style="background: var(--theme1) url('demos/bike/images/hero-bike.png') right 70% / cover; height: 750px;">
+        
+
+<div class="container center" *ngFor="let item of Data|async"> 
+    <div class="heading-block mt-4 nobottomborder">
+    <h1 class="nott t600" style="font-size: 44px; letter-spacing: -1px">{{item.spaconfig.component.body.welcome.h1}}</h1>
+    <small class="mb-5 h6 lead">{{item.spaconfig.component.body.welcome.small}}</small>
+    </div>
+    <a [routerLink]="['/',item.spaconfig.component.body.welcome.button1Link]" data-lightbox="inline" class="button button-large button-rounded button-shadow">{{item.spaconfig.component.body.welcome.button1Text}}</a>
+    <a [routerLink]="['/',item.spaconfig.component.body.welcome.button2Link]" class="button button-large button-rounded button-border">{{item.spaconfig.component.body.welcome.button2Text}}</a>
+</div>
+</div>
+</div>
+</section>

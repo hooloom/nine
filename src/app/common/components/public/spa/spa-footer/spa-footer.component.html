@@ -1,0 +1,90 @@
+
+<footer id="footer" class="dark">
+<div *ngFor="let item of Data|async">
+    <div class="container">
+    
+    <div class="footer-widgets-wrap clearfix">
+    <div class="row">
+    <div class="col-6 col-lg-4">
+    <img class="mb-2" src="./../../../assets/images/logo-foo.png" alt="" width="123">
+    <small class="d-block mb-4 text-muted">&copy; 2017-{{currentDate | date:'yyyy'}}</small>
+    <div class="row my-4">
+    <div class="col-md-6">
+    <div class="counter counter-small text-light t400"><span class="h4" data-from="50" data-to="8465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
+    <h5 class="m-0 text-muted">Total Rented</h5>
+    </div>
+    <div class="col-md-6">
+    <div class="counter counter-small text-light t400"><span class="h4" data-from="100" data-to="18465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
+    <h5 class="m-0 text-muted">Clients Served</h5>
+    </div>
+    </div>
+    <div class="clear"></div>
+    <div>
+    <a href="demo-bike.html#" class="social-icon mr-2 si-colored si-rounded si-small si-facebook">
+    <i class="icon-facebook"></i>
+    <i class="icon-facebook"></i>
+    </a>
+    <a href="demo-bike.html#" class="social-icon mr-2 si-colored si-rounded si-small si-twitter">
+    <i class="icon-twitter"></i>
+    <i class="icon-twitter"></i>
+    </a>
+    <a href="demo-bike.html#" class="social-icon mr-2 si-colored si-rounded si-small si-youtube">
+    <i class="icon-youtube"></i>
+    <i class="icon-youtube"></i>
+    </a>
+    <a href="demo-bike.html#" class="social-icon si-colored si-rounded si-small si-appstore">
+    <i class="icon-apple"></i>
+    <i class="icon-apple"></i>
+    </a>
+    </div>
+    </div>
+    <div class="col-6 col-lg-3">
+    <h4>Features</h4>
+    <ul class="list-unstyled nobottommargin text-small">
+    <li class="mb-2"><a class="text-muted" href="demo-bike.html#">Cool stuff</a></li>
+    <li class="mb-2"><a class="text-muted" href="demo-bike.html#">Random feature</a></li>
+    <li class="mb-2"><a class="text-muted" href="demo-bike.html#">Team feature</a></li>
+    <li class="mb-2"><a class="text-muted" href="demo-bike.html#">Stuff for developers</a></li>
+    <li class="mb-2"><a class="text-muted" href="demo-bike.html#">Another one</a></li>
+    <li><a class="text-muted" href="demo-bike.html#">Last time</a></li>
+    </ul>
+    </div>
+    <div class="col-6 col-lg-3 mt-5 mt-lg-0">
+    <h4>Resources</h4>
+    <ul class="list-unstyled nobottommargin text-small">
+    <li class="mb-2"><a class="text-muted" href="demo-bike.html#">Resource</a></li>
+    <li class="mb-2"><a class="text-muted" href="demo-bike.html#">Resource name</a></li>
+    <li class="mb-2"><a class="text-muted" href="demo-bike.html#">Another resource</a></li>
+    <li><a class="text-muted" href="demo-bike.html#">Final resource</a></li>
+    </ul>
+    </div>
+    <div class="col-6 col-lg-2 mt-5 mt-lg-0">
+    <h4>About</h4>
+    <ul class="list-unstyled nobottommargin text-small">
+    <li class="mb-2"><a class="text-muted" href="demo-bike.html#">Team</a></li>
+    <li class="mb-2"><a class="text-muted" href="demo-bike.html#">Locations</a></li>
+    <li class="mb-2"><a class="text-muted" href="demo-bike.html#">Privacy</a></li>
+    <li><a class="text-muted" href="demo-bike.html#">Terms</a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    <div id="copyrights">
+    <div class="container clearfix">
+    <div class="row align-items-center justify-content-between">
+    <div class="col-md-6">
+    Copyrights &copy; 2014-{{currentDate | date:'yyyy'}} All Rights Reserved by {{item.spaconfig.data.orgDetails.orgname}}<br>
+    <div class="copyright-links"><a href="demo-bike.html#">Terms of Use</a> / <a href="demo-bike.html#">Privacy Policy</a></div>
+    </div>
+    <div class="col-md-6 d-flex justify-content-md-end mt-4 mt-md-0">
+    <div class="copyrights-menu copyright-links mb-0 clearfix">
+    <a href="demo-bike.html#">Home</a>/<a href="demo-bike.html#">About Us</a>/<a href="demo-bike.html#">Price</a>/<a href="demo-bike.html#">Contact</a>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+</div>
+    </footer>

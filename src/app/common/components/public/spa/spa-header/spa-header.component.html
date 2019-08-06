@@ -1,0 +1,50 @@
+
+<header id="header" class="clearfix static-sticky border-bottom" *ngFor="let item of Data|async">
+    <div id="header-wrap">
+    <div class="container clearfix">
+    <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+        <div id="logo" class="align-self-center" style="line-height: 60px">
+           <ng-container *ngIf="item.spaconfig.component.header.subcomponents.logo.logoisText; else logoisImage"> {{item.spaconfig.component.header.subcomponents.logo.logoText}}</ng-container>
+            <ng-template #logoisImage><img [src]="item.spaconfig.component.header.subcomponents.logo.logoPath"></ng-template>
+        </div>
+  
+    
+    <nav id="primary-menu" class="d-lg-flex d-xl-flex justify-content-xl-between justify-content-lg-between fnone" style="height: 60px; vertical-align:middle; align-self: center;">
+    <ul class="not-dark align-self-start"></ul>
+    <ul class="not-dark align-self-center one-page-menu" style="display: flex">
+            <li *ngIf="item.spaconfig.component.header.subcomponents.mainnav.navitem0.published" [style.order]="item.spaconfig.component.header.subcomponents.mainnav.navitem0.order">
+                    <a [class.active]="'isSectionActive('+item.spaconfig.component.header.subcomponents.mainnav.navitem0.sectionlink+')'" routerLink="."  [fragment]="item.spaconfig.component.header.subcomponents.mainnav.navitem0.sectionlink"><div>{{item.spaconfig.component.header.subcomponents.mainnav.navitem0.sectionName}}</div></a>
+            </li>
+            <li *ngIf="item.spaconfig.component.header.subcomponents.mainnav.navitem1.published" [style.order]="item.spaconfig.component.header.subcomponents.mainnav.navitem1.order">
+                    <a [class.active]="'isSectionActive('+item.spaconfig.component.header.subcomponents.mainnav.navitem1.sectionlink+')'" routerLink="."  [fragment]="item.spaconfig.component.header.subcomponents.mainnav.navitem1.sectionlink"><div>{{item.spaconfig.component.header.subcomponents.mainnav.navitem1.sectionName}}</div></a>
+            </li>
+            <li *ngIf="item.spaconfig.component.header.subcomponents.mainnav.navitem2.published" [style.order]="item.spaconfig.component.header.subcomponents.mainnav.navitem2.order">
+                    <a [class.active]="'isSectionActive('+item.spaconfig.component.header.subcomponents.mainnav.navitem2.sectionlink+')'" routerLink="."  [fragment]="item.spaconfig.component.header.subcomponents.mainnav.navitem2.sectionlink"><div>{{item.spaconfig.component.header.subcomponents.mainnav.navitem2.sectionName}}</div></a>
+            </li>
+            <li *ngIf="item.spaconfig.component.header.subcomponents.mainnav.navitem3.published" [style.order]="item.spaconfig.component.header.subcomponents.mainnav.navitem3.order">
+                    <a [class.active]="'isSectionActive('+item.spaconfig.component.header.subcomponents.mainnav.navitem3.sectionlink+')'" routerLink="."  [fragment]="item.spaconfig.component.header.subcomponents.mainnav.navitem3.sectionlink"><div>{{item.spaconfig.component.header.subcomponents.mainnav.navitem3.sectionName}}</div></a>
+            </li>
+            <li *ngIf="item.spaconfig.component.header.subcomponents.mainnav.navitem4.published" [style.order]="item.spaconfig.component.header.subcomponents.mainnav.navitem4.order">
+                    <a [class.active]="'isSectionActive('+item.spaconfig.component.header.subcomponents.mainnav.navitem4.sectionlink+')'" routerLink="."  [fragment]="item.spaconfig.component.header.subcomponents.mainnav.navitem4.sectionlink"><div>{{item.spaconfig.component.header.subcomponents.mainnav.navitem4.sectionName}}</div></a>
+            </li>
+            <li *ngIf="item.spaconfig.component.header.subcomponents.mainnav.navitem5.published" [style.order]="item.spaconfig.component.header.subcomponents.mainnav.navitem5.order">
+                    <a [class.active]="'isSectionActive('+item.spaconfig.component.header.subcomponents.mainnav.navitem5.sectionlink+')'" routerLink="."  [fragment]="item.spaconfig.component.header.subcomponents.mainnav.navitem5.sectionlink"><div>{{item.spaconfig.component.header.subcomponents.mainnav.navitem5.sectionName}}</div></a>
+            </li>
+            <li *ngIf="item.spaconfig.component.header.subcomponents.mainnav.navitem6.published" [style.order]="item.spaconfig.component.header.subcomponents.mainnav.navitem6.order">
+                    <a [class.active]="'isSectionActive('+item.spaconfig.component.header.subcomponents.mainnav.navitem6.sectionlink+')'" routerLink="."  [fragment]="item.spaconfig.component.header.subcomponents.mainnav.navitem6.sectionlink"><div>{{item.spaconfig.component.header.subcomponents.mainnav.navitem6.sectionName}}</div></a>
+            </li>
+    </ul>
+    <ul class="not-dark align-self-end align-self-center">
+    <li><a (click)="loginCollapsed = !loginCollapsed"  aria-controls="loginCollapse" [attr.aria-expanded]="!loginCollapsed" style="cursor: pointer" data-lightbox="inline" class="color"><div><i class="icon-line2-login"></i>Login</div></a></li>
+    </ul>
+    </nav>
+    </div>
+    </div>
+    </header>
+  
+    <div class="center" style="width: 100vw; margin-top: 90px" style="background: var(--tirtiary-color)" id="loginCollapse" [ngbCollapse]="loginCollapsed">
+        <spa-login></spa-login>
+</div>
+<div class="section section-curve notopmargin">
+</div>
+

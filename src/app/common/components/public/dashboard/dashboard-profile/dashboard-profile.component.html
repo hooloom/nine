@@ -1,0 +1,208 @@
+<div *ngFor="let item of Data|async">
+<div class="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col-5">
+                    <h1>Organization Profile</h1>
+                </div>
+                <div class="col-7">
+                    <nav>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a routerLink="/dashboard">Dashboard</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">Profile</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- content area -->
+    <div class="content-body">
+        <div class="container">
+            <!-- <div class="row"> -->
+                
+
+                <!-- <div class="col-xl-12"> -->
+                    
+
+                    <!-- Modal -->
+                    <div class="event-modal event-profile">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+
+                                <div class="row">
+                                    <div class="col-xl-8 p-r-0">
+                                        <div class="modal-right">
+                                            <div class="media personal-profile">
+                                                    <ng-container *ngIf="item.spaconfig.component.header.subcomponents.logo.logoisText; else logoisImage"> <h3>{{item.spaconfig.component.header.subcomponents.logo.logoText}}</h3></ng-container>
+                                                    <ng-template #logoisImage><img class="m-r-30 img-fluid" [src]="item.spaconfig.component.header.subcomponents.logo.logoPath"></ng-template>
+                                             
+                                                <div class="media-body">
+                                                    <h3 class="mt-0">{{item.organization.name}}</h3>
+                                                    <p >{{item.organization.billingaddress.address}}</p>
+                                                    <p  *ngIf="item.organization.billingaddress.address1published">{{item.organization.billingaddress.address1}}</p>
+                                                    <p  *ngIf="item.organization.billingaddress.address2published">{{item.organization.billingaddress.address2}}</p>
+                                                    <p  *ngIf="item.organization.billingaddress.address3published">{{item.organization.billingaddress.address3}}</p>
+                                                    <p >{{item.organization.billingaddress.city}}, {{item.organization.billingaddress.state}}, {{item.organization.billingaddress.zip}}</p>
+
+                                                    <p class="denger"><a href="{{item.organization.url}}" target="_blank">www.yoursite.com</a></p>
+                                                    <p>Language : <ng-container *ngIf="item.organization.defaultlanguage.english">English</ng-container><ng-container *ngIf="item.organization.defaultlanguage.spanish">Español</ng-container><ng-container *ngIf="item.organization.defaultlanguage.french">Français</ng-container></p>
+                                                </div>
+                                                <button class="btn btn-secondary">EDIT</button>
+                                            </div>
+
+                                            <div class="modal-about-area">
+                                                <h3>MISSION STATEMENT</h3>
+                                                <p>{{item.organization.misc.mission.statement}}</p>
+
+                                               <a *ngIf="item.organization.socialaccounts.facebook.published"  href="{{item.organization.socialaccounts.facebook.link}}"></a> <i class="icon-facebook2"></i>
+                                                <a  *ngIf="item.organization.socialaccounts.twitter.published" href="{{item.organization.socialaccounts.twitter.link}}"></a><i class="icon-twitter2"></i>
+                                               <a *ngIf="item.organization.socialaccounts.instagram.published" href="{{item.organization.socialaccounts.instagram.link}}"></a> <i  class="icon-instagram2"></i>
+                                               <a *ngIf="item.organization.socialaccounts.youtube.published" href="{{item.organization.socialaccounts.youtube.link}}"></a> <i class="icon-youtube2"></i>
+
+                                            </div>
+
+                                            <div class="modal-tags">
+                                                <h3>INTEREST</h3>
+                                                <button class="btn btn-outline-secondary btn-rounded">FOOD</button>
+                                                <button class="btn btn-outline-secondary btn-rounded">MUSIC</button>
+                                                <button class="btn btn-outline-secondary btn-rounded">TECHNOLOGY</button>
+                                                <button class="btn btn-outline-secondary btn-rounded">AWARDS</button>
+                                            </div>
+
+                                            <div class="modal-footer-area">
+                                                <div class="row justify-content-between">
+                                                    <div class="col-auto">
+                                                        <P>
+                                                            <i class="fa fa-check-circle"></i>ACTIVITY</P>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <a href="profile.html#">
+                                                            <i class="fa fa-exclamation-triangle"></i>
+                                                        </a>
+                                                        <a href="profile.html#">
+                                                            <i class="fa fa-trash"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+                                    <div class="col-xl-4 p-l-0">
+                                        <div class="modal-left">
+                                            <!-- Nav tabs -->
+
+                                            <ul class="nav nav-tabs" role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" data-toggle="tab" href="profile.html#home">EVENT ATTENDED</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-toggle="tab" href="profile.html#profile">EVENT CREATED</a>
+                                                </li>
+
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade show active" id="home" role="tabpanel">
+                                                    <div class="media">
+                                                        <img class="m-r-15 img-fluid" src="../assets/images/peoples/modl-ryt.jpg" alt="placeholder image">
+                                                        <div class="media-body">
+                                                            <h3 class="mt-0">Anamika</h3>
+                                                            <p>
+                                                                <i class="fa fa-map-marker"></i>Location</p>
+                                                            <span>22 June 2018</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media">
+                                                        <img class="m-r-15 img-fluid" src="../assets/images/peoples/modl-ryt2.jpg" alt="placeholder image">
+                                                        <div class="media-body">
+                                                            <h3 class="mt-0">Anamika</h3>
+                                                            <p>
+                                                                <i class="fa fa-map-marker"></i>Location</p>
+                                                            <span>22 June 2018</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media">
+                                                        <img class="m-r-15 img-fluid" src="../assets/images/peoples/modl-ryt3.jpg" alt="placeholder image">
+                                                        <div class="media-body">
+                                                            <h3 class="mt-0">Anamika</h3>
+                                                            <p>
+                                                                <i class="fa fa-map-marker"></i>Location</p>
+                                                            <span>22 June 2018</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media">
+                                                        <img class="m-r-15 img-fluid" src="../assets/images/peoples/modl-ryt4.jpg" alt="placeholder image">
+                                                        <div class="media-body">
+                                                            <h3 class="mt-0">Anamika</h3>
+                                                            <p>
+                                                                <i class="fa fa-map-marker"></i>Location</p>
+                                                            <span>22 June 2018</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media">
+                                                        <img class="m-r-15 img-fluid" src="../assets/images/peoples/modl-ryt5.jpg" alt="placeholder image">
+                                                        <div class="media-body">
+                                                            <h3 class="mt-0">Anamika</h3>
+                                                            <p>
+                                                                <i class="fa fa-map-marker"></i>Location</p>
+                                                            <span>22 June 2018</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="tab-pane fade" id="profile">
+                                                    <div class="media">
+                                                        <img class="m-r-15 img-fluid" src="../assets/images/peoples/modl-ryt4.jpg" alt="placeholder image">
+                                                        <div class="media-body">
+                                                            <h3 class="mt-0">Anamika</h3>
+                                                            <p>
+                                                                <i class="fa fa-map-marker"></i>Location</p>
+                                                            <span>22 June 2018</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media">
+                                                        <img class="m-r-15 img-fluid" src="../assets/images/peoples/modl-ryt3.jpg" alt="placeholder image">
+                                                        <div class="media-body">
+                                                            <h3 class="mt-0">Anamika</h3>
+                                                            <p>
+                                                                <i class="fa fa-map-marker"></i>Location</p>
+                                                            <span>22 June 2018</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media">
+                                                        <img class="m-r-15 img-fluid" src="../assets/images/peoples/modl-ryt2.jpg" alt="placeholder image">
+                                                        <div class="media-body">
+                                                            <h3 class="mt-0">Anamika</h3>
+                                                            <p>
+                                                                <i class="fa fa-map-marker"></i>Location</p>
+                                                            <span>22 June 2018</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                <!-- </div> -->
+
+                
+            <!-- </div> -->
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,105 @@
+@import url("./../../../assets/font-icons.css");
+@import url("./../../../assets/et-line.css");
+
+/****-*-****/
+:root spa-body{
+    display: flex;
+    flex-direction: column;
+}
+
+:root spa-body spa-carousel{
+    order: var(--spacarousel-order);
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+
+    
+}
+:root spa-body spa-pricing{
+    order: var(--spapricing-order);
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+:root spa-body spa-price-grid{
+    order: var(--spapricegrid-order);
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+:root spa-body spa-product-list{
+    order: var(--spaproductlist-order);
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+:root spa-body spa-newsletter{
+    order: var(--spanewsletter-order);
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+:root spa-body spa-showcase{
+    order: var(--spashowcase-order);
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+:root spa-body spa-video{
+    order: var(--spavideo-order);
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+:root spa-body spa-welcome{
+    order: var(--spawelcome-order);
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+
+}
+:root spa-footer{
+    order: 99;
+  
+
+}
